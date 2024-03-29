@@ -21,7 +21,7 @@
     <!-- header section -->
     <header class="header">
       <nav class="navbar">
-        <h2 class="logo brand-logo"><a href="index.ejs">Waiveer</a></h2>
+        <h2 class="logo brand-logo"><a href="/">Waiveer</a></h2>
         <input type="checkbox" id="menu-toggle" />
         <label for="menu-toggle" id="hamburger-btn">
           <svg
@@ -47,8 +47,8 @@
           </li>
         </ul>
         <div class="buttons">
-          <a href="#" class="signin" onclick="displayPopup()">Log in</a>
-          <a href="#" class="signup" onclick="displayPopup()">Register</a>
+          <a href="/login" class="signin">Log in</a>
+          <a href="/register" class="signup">Register</a>
         </div>
       </nav>
     </header>
@@ -67,9 +67,11 @@
             along with skill courses.
           </p>
           <div class="butres">
-             <button class="join">
-            <a href="#section3" class="nav-link scroll-link" onclick="displayPopup()">Get Started</a>
+             <a href="/register">
+                <button class="join">
+            <div class="nav-link scroll-link">Get Started</div>
           </button>
+             </a>
           <button class="learn">
             <a href="#section1" class="nav-link scroll-link">Learn More</a>
           </button>
@@ -180,7 +182,7 @@
         <div class="justify-content-center align-items-center">
           <div class="row footer-content gp-155px">
             <div class="footer-parts-1 column">
-              <a class="footer-brand-logo" href="index.html"> Waiveer </a>
+              <a class="footer-brand-logo" href="/"> Waiveer </a>
             </div>
 
             <div class="footer-parts">

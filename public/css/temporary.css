@@ -1,0 +1,186 @@
+/* POP UP CONTAINER */
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500&family=Open+Sans&family=Poppins:wght@300&display=swap');
+
+:root{
+    --nvbr-brnd-clr : rgba(0, 0, 0, 0.9);
+    --thm-clr-1: #cbeb55c8;
+    --thm-clr-2: #F8F8FB;
+    --thm-clr-3: black;
+    --thm-clr-4: rgb(215, 215, 215);
+    --thm-clr-5: rgb(57 57 57 / 12%);
+    --thm-clr-6: #acd31e;
+    --fnt-clr : rgb(9, 3, 91);
+    --btn-brdr-clr : #e0f0a7;
+    --wvr-gry :#0b2b3e;
+    --brnd-lg-fnt-sz: 40px;
+    --brnd-lg-fnt-sz-2: 40px;
+    --rgb: rgba(245, 247, 248,1);
+    
+}
+
+
+@keyframes appear{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes scale{
+    from{
+        scale: 0.25;
+    }
+    to{
+        scale: 1;
+    }
+}
+
+.popup-container {
+    color: #000000;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(203, 235, 85);
+    padding: 140px;
+    border-radius: 30px;
+    box-shadow: 0 0 22px rgba(0, 0, 0, 0.22);
+    z-index: 9999;
+    max-width: 90%;
+    text-align: center;
+    animation: appear 0.13s ease-in-out 1 , scale 0.13s ease-in-out 1 ;
+    /* animation: ; */
+    /* border: 0.0001px solid #333; Dark black border */
+}
+/* .popup-container{
+    backdrop-filter: blur(10px);
+} */
+
+.fstP{
+    font-weight: bold;
+    font-size: 40px; /* Adjust font size */
+    padding: 50px;
+}
+
+.sndP{
+    font-size: 20px; /* Adjust font size */
+    font-weight: 200;
+    font-family: 'Poppins', sans-serif; 
+    color: rgb(0, 0, 0);
+    font-weight: 800;
+    padding: 20px 55px;
+    
+}
+.mailto{
+    font-weight: lighter;
+}
+
+/* Styles for the text content */
+.popup-container p {
+    /* font-size: 16px; Adjust font size */
+    line-height: 1.3; /* Adjust line height */
+    color: #333; /* Text color */
+    /* margin-bottom: 15px; Adjust spacing between paragraphs */
+}
+
+.popup-container a {
+    color: #007bff; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.popup-container a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+/* Styles for the close button */
+.close-btn {
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    cursor: pointer;
+    margin-right: 10px;
+    color: #000000;
+}
+
+
+@media screen and (max-width: 768px) {
+    .close-btn {
+        width: 20px;
+        height: 20px;
+    }
+    .popup-container {
+        /* max-width: 80%; */
+        padding: 70px 0;
+    }
+    .fstP{
+        font-size: 25px;
+        padding: 0 10px 10px;
+    }
+
+}
+
+
+/* development popup */
+
+.dev-popup{
+  
+    width: 500px;
+    height: auto;
+    padding: 25px;
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    box-shadow: 1px 1px 10px rgba(128, 128, 128, 0.16) , 5px 5px 100px rgba(44, 44, 44, 0.322) ;
+    border-radius: 20px;
+    background-color: rgba(203, 235, 85, 1);
+    transform: translate(-50%, -50%);
+    animation: appear 0.25s ease-in-out 1 ;
+    max-width: 76%;
+    text-align: center;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: black;
+    
+    /* background-color: rgba(246, 246, 246, 0.9); */
+    /* padding: 34px 70px 42px 70px; */
+    
+}
+.dev-popup h2{
+    font-size: 30px;
+    margin: 10px;
+}
+.dev-popup p{
+    font-size: 20px;
+    font-weight: 400;
+    padding: 20px;
+}
+.dev-popup button{
+    /* align-self: flex-end; */
+    border: none;
+    border-radius: 50%;
+    height: 50px;
+    padding: 10px;
+    width: 50px;
+    font-size: 20px;
+    color: white;
+    background-color: var(--thm-clr-3);
+    transition: scale 0.25s;
+}
+.dev-popup button:hover{
+ scale: 105%;
+}
+bgc-blur{
+    z-index: 40;
+    height: 100vh;
+    width: 100vw;
+}

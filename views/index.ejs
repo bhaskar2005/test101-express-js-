@@ -1,13 +1,361 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Express with EJS</title>
-    <link rel="stylesheet" href="/style.css">
-</head>
-<body>
-    <h1>Welcome to Express with EJS</h1>
-    <p>This is a basic example of using EJS with Express.</p>
-</body>
+    <meta name="Keywords" content="placements, recruiter, resume builder , resume , on-campus , oncampus placements , oncampusplacements , placements Website">
+    <meta name="Description" content="The Best Placement Software, site is under development">    
+    <meta property="og:image" content="ICONS/logo 33.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="436">
+    <meta property="og:image:height" content="228">
+    <meta property="og:description" content="The Best Placement Software">
+    <title>Waiveer - Best Placement Software</title>
+    <link rel="icon" type="image/x-icon" href="ICONS/favicon.png"/>
+
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/temporary.css" />
+  </head>
+  <body>
+    <!-- header section -->
+    <header class="header">
+      <nav class="navbar">
+        <h2 class="logo brand-logo"><a href="index.ejs">Waiveer</a></h2>
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" id="hamburger-btn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+          >
+            <path
+              d="M3 12h18M3 6h18M3 18h18"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+        </label>
+        <ul class="links">
+          <li><a href="#home" class="nav-link scroll-link">Home</a></li>
+          <li><a href="#section1" class="nav-link scroll-link">Features</a></li>
+          <li><a href="#section2" class="nav-link scroll-link">FAQs</a></li>
+          <li>
+            <a href="#section4" class="nav-link scroll-link">Contact Us</a>
+          </li>
+        </ul>
+        <div class="buttons">
+          <a href="#" class="signin" onclick="displayPopup()">Log in</a>
+          <a href="#" class="signup" onclick="displayPopup()">Register</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero section -->
+    <div class="container" id="home">
+      <div class="left">
+        <div class="content">
+          <h1>
+            Where <span class="text-stroke" style="color: rgba(203, 235, 85, 1)">Dreams</span> Meet
+            <span class="text-stroke" style="color: rgba(203, 235, 85, 1)">Destiny</span>
+          </h1>
+          <p>
+            Waiveer is a placement management software for both on-campus and
+            off-campus to simplify the process and create more job opportunities
+            along with skill courses.
+          </p>
+          <div class="butres">
+             <button class="join">
+            <a href="#section3" class="nav-link scroll-link" onclick="displayPopup()">Get Started</a>
+          </button>
+          <button class="learn">
+            <a href="#section1" class="nav-link scroll-link">Learn More</a>
+          </button>
+          </div>
+         
+        </div>
+      </div>
+
+      <div class="right">
+        <img src="hero.svg" alt="hero-img" />
+      </div>
+    </div>
+
+    <!-- Feature section -->
+    <section id="section1">
+      <h1 class="Features-word">Features</h1>
+      <div class="sub-section sub-section1">
+        <div class="left1 fres">
+          <img src="stdnt-ftrs-img.svg" alt="hero-img" />
+        </div>
+        <div class="right1">
+          <div class="content1 c1">
+            <h1>Waiveer for students</h1>
+            <p>
+              Waiveer creates more opportunities for both on-campus and
+              off-campus placements. With Waiveer elevate your confidence,
+              polish your skills and ace every interview with our comprehensive
+              preparation resources.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="sub-section sub-section2">
+        <div class="left1">
+          <div class="content1 c2">
+            <h1>Waiveer for institutions</h1>
+            <p>
+              Virtual placements turn your institution into a newsmaking magnet,
+              connecting students with top employers and boosting institution's
+              reputation to the stars. Virtual placements unite alumni,
+              fostering intergenerational mentorship. Your dedication elevates
+              reputation, ensuring unparalleled success.
+            </p>
+          </div>
+        </div>
+        <div class="right1 fres">
+          <img src="nsttt-ftrs-img.svg" alt="hero-img" />
+        </div>
+      </div>
+      <div class="sub-section sub-section3">
+        <div class="left1 fres">
+          <img src="rctrs-ftrs-img.svg" alt="hero-img" />
+        </div>
+        <div class="right1">
+          <div class="content1 c1">
+            <h1>Waiveer for Recruiters</h1>
+            <p>
+              Recruiters gain access to a wider pool of quality employers on
+              Waiveer for both on-campus & off-campus. Waiveer reduces the
+              hiring cost for employers, ensuring a more budget-friendly
+              recruitment process.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+     
+    <!--faq-->
+  <section class="faq-section" id="section2">
+    <div class="faqtxt">
+    <p>Frequently Asked Questions</p>
+    </div>
+    
+    <div class="faqgrid">
+    <div class="faq-gif"><img src="/faq-script.svg"></div>
+    <div class="accordion">
+      <input type="checkbox" id="sec1" checked>
+      <label for="sec1" class="accordion-title">What is Waiveer?</label>
+      <div class="accordion-content">
+        <p>Waiveer is building a placement management system (for both on-campus and off-campus) to simplify the process and create more job opportunities along with skill courses.</p>
+      </div>
+      <input type="checkbox" id="sec2">
+      <label for="sec2" class="accordion-title">When is the official platform scheduled to launch?</label>
+      <div class="accordion-content">
+        <p>We plan to launch our product in 2024.</p>
+      </div>
+      <input type="checkbox" id="sec3">
+      <label for="sec3" class="accordion-title">What is the main difference between on-campus and off-campus placement?</label>
+      <div class="accordion-content">
+        <p>On-campus placement refers to recruitment events conducted within the premises of an educational institution, where companies come to hire students directly. Off-campus placement, on the other hand, involves job interviews and recruitment drives organized outside the campus, often through job fairs or online platforms. In Waiveer, on-campus placement students will receive additional benefits.</p>
+      </div>
+      <input type="checkbox" id="sec4">
+      <label for="sec4" class="accordion-title">How the virtual process will work?</label>
+      <div class="accordion-content">
+        <p>In Waiveer, the virtual process caters to both on-campus and off-campus placements. Students can seamlessly participate in online placement activities, connect with companies virtually, and access resources. The platform facilitates virtual interviews, company interactions, and skill-enhancement courses, ensuring an inclusive and efficient experience for all users, regardless of their campus location.</p>
+      </div>
+    </div>
+    </div>
+    </section>
+    <!--end faq-->
+
+
+
+
+    <section class id="section4">
+      <footer class="" id="footer">
+        <div class="justify-content-center align-items-center">
+          <div class="row footer-content gp-155px">
+            <div class="footer-parts-1 column">
+              <a class="footer-brand-logo" href="index.html"> Waiveer </a>
+            </div>
+
+            <div class="footer-parts">
+                          <div class="footer-parts-2 algn-tms-cntr">
+              <h3 class="footer-sub-heading">Resources</h3>
+
+              <ul class="links-container">
+                <li class>
+                  <a
+                    href="#home"
+                    class="site-footer-link clr-thm-clr-1 hover-a_tag-2 nav-link scroll-link"
+                    >Home</a
+                  >
+                </li>
+                <li class>
+                  <a
+                    href="#section1"
+                    class="site-footer-link clr-thm-clr-1 hover-a_tag-2 nav-link scroll-link"
+                    >Features</a
+                  >
+                </li>
+                <li class>
+                  <a
+                    href="#section2"
+                    class="site-footer-link clr-thm-clr-1 hover-a_tag-2 nav-link scroll-link"
+                    >FAQs</a
+                  >
+                </li>
+                <!-- <li class>
+                  <a
+                    href="#section3"
+                    class="site-footer-link clr-thm-clr-1 hover-a_tag-2 nav-link scroll-link"
+                    >Log in / Register</a
+                  >
+                </li> -->
+              </ul>
+                          </div>
+
+                      <div class="footer-parts-3">
+              <div>
+                <h3 class="footer-sub-heading">Contact Us</h3>
+                <p class>
+                  <a
+                    href="mailto:services@waiveer.com"
+                    target="_blank"
+                    class="clr-thm-clr-1 hover-a_tag-2 site-footer-link"
+                  >
+                    services@waiveer.com
+                  </a>
+                </p>
+              </div>
+              <div>
+                <h3 class="footer-sub-heading">Feedback</h3>
+                <p class>
+                  <a
+                    href="mailto:support@waiveer.com"
+                    target="_blank"
+                    class="clr-thm-clr-1 hover-a_tag-2 site-footer-link"
+                  >
+                    support@waiveer.com
+                  </a>
+                </p>
+              </div>
+                      </div>
+            </div>
+
+
+            <div class="footer-parts-4">
+              <p class="copyright-text">
+                Copyright © 2024 Waiveer . All rights reserved.
+              </p>
+              <div class="scl-md-icons">
+                <a
+                  href="https://twitter.com/Waiveerofficial"
+                  target="_blank"
+                  class="scl-md-lnk x-link"
+                  ><img
+                    class="scl-md-icon x-icon"
+                    src="ICONS/twitterx-800.svg"
+                    alt
+                /></a>
+                <a
+                  href="https://www.facebook.com/profile.php?id=61556607702365"
+                  target="_blank"
+                  class="scl-md-lnk fb-link"
+                  ><img
+                    class="scl-md-icon"
+                    src="ICONS/facebook-color-svgrepo-com.svg"
+                    alt
+                /></a>
+                <a
+                  href="https://www.instagram.com/waiveerofficial/"
+                  target="_blank"
+                  class="scl-md-lnk i-link"
+                  ><img
+                    class="scl-md-icon"
+                    src="ICONS/instagram-svgrepo-com.svg"
+                    alt
+                /></a>
+                <a
+                  href="https://www.linkedin.com/company/waiveer/about/"
+                  target="_blank"
+                  class="scl-md-lnk in-link"
+                  ><img
+                    class="scl-md-icon"
+                    src="ICONS/linkedin-svgrepo-com(2).svg"
+                    alt
+                /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </section>
+
+    <div class="popup-container" id="popupContainer">
+      <!-- Close button -->
+      <span class="close-btn" onclick="closePopup()"
+        ><img src="ICONS/cross cut.svg" alt=""
+      /></span>
+      <!-- Popup content -->
+      <div class="pop-cont">
+        <div class="fstP">
+        <p>Coming Soon</p>
+      </div>
+      <div class="sndP">
+        <p>This feature is under development.</p>
+        <p>
+          For any queries, contact us at
+          <a href="mailto:services@waiveer.com" class="mailto"
+            >services@waiveer.com</a
+          >.
+        </p>
+      </div>
+      
+    </div>
+
+    <!-- <div class="bgc-blur">
+      <div class="dev-popup" id="dev-popup">
+        <h2>Disclaimer:</h2>
+        <p>
+          Waiveer is under development, and some features may be incomplete.
+          Content is for informational purposes and subject to change. Users are
+          encouraged to be aware of ongoing development. We appreciate your
+          understanding and welcome feedback to enhance the user experience.
+          Thank you for joining Waiveer's development journey.
+        </p>
+        <button onclick="close_popup()">OK</button>
+      </div>
+    </div> -->
+    
+    <!-- <footer class="footer">
+      <div class="box">
+        <h3 class="f1">Waiveer</h3>
+      </div>
+
+    <div class="box resources">
+      <p class="f2">Resources</p>
+      <div class="f2r">
+        <a href="#">Home</a>
+        <a href="#">Features</a>
+        <a href="#">Why to Join</a>
+        <a href="#">FAQs</a>
+        <a href="#">Register</a>
+      </div>
+    </div>
+
+    <div class="box"></div>
+    <div class="box"></div>
+    </footer> -->
+
+    <script src="faq.js"></script>
+    <script src="smooth-scrolling.js"></script>
+    <script src="js/popup.js"></script>
+    <script src="js/development_popup.js"></script>
+    <script src="colorChange.js"></script>
+  </body>
 </html>
